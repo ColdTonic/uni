@@ -1,5 +1,4 @@
 import os
-from dotenv import load_dotenv
 from sodapy import Socrata
 import pandas as pd
 import streamlit as st
@@ -7,15 +6,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 #Client code/import environment variables into code
-load_dotenv()
-TOKEN = os.getenv('TOKEN_ENV')
-USER = os.getenv('USER')
-PASSWORD = os.getenv('PASSWORD')
 
 client = Socrata("data.melbourne.vic.gov.au",
-                  TOKEN,
-                  username=USER,
-                  password=PASSWORD)
+                  st.secrets(["TOKEN"),
+                  username=st.secrets("USER"),
+                  password=st.secrets("PASSWORD"))
 
 #import parking sensor dataset
 parking = client.get("7pgd-bdf2", limit=2000)
