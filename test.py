@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 #Client code/import environment variables into code
 
 client = Socrata("data.melbourne.vic.gov.au",
-                  st.secrets["TOKEN"],
+                  st.secrets["TOKEN_ENV"],
                   username=st.secrets["USER"],
                   password=st.secrets["PASSWORD"])
 
