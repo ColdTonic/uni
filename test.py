@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 #Client code/import environment variables into code
 
 client = Socrata("data.melbourne.vic.gov.au",
-                  st.secrets(["TOKEN"),
-                  username=st.secrets("USER"),
-                  password=st.secrets("PASSWORD"))
+                  st.secrets["TOKEN"],
+                  username=st.secrets["USER"],
+                  password=st.secrets["PASSWORD"])
 
 #import parking sensor dataset
 parking = client.get("7pgd-bdf2", limit=2000)
