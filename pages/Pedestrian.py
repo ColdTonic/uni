@@ -33,4 +33,6 @@ st.line_chart(sensor_query, x='date_time', y='hourly_counts')
 
 
 #https://app.powerbi.com/links/rJKFdKXem5?ctid=df7f7579-3e9c-4a7e-b844-420280f53859&pbi_source=linkShare
-st.components.v1.html("https://app.powerbi.com/reportEmbed?reportId=a418c44f-ca82-4803-997b-1420c07c28c9&autoAuth=true&ctid=df7f7579-3e9c-4a7e-b844-420280f53859")
+#"https://app.powerbi.com/reportEmbed?reportId=a418c44f-ca82-4803-997b-1420c07c28c9&autoAuth=true&ctid=df7f7579-3e9c-4a7e-b844-420280f53859"
+st.components.v1.html("""<iframe title="testbi" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=a418c44f-ca82-4803-997b-1420c07c28c9&autoAuth=true&ctid=df7f7579-3e9c-4a7e-b844-420280f53859" frameborder="0" allowFullScreen="true"></iframe>""")
+
