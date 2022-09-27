@@ -32,3 +32,12 @@ sensor_query = pedestrian_df.loc[(pedestrian_df['sensor_id'] == sensor_val) & (p
 #send output to streamlit
 st.header("Display data for sensor: " + sensor_val)
 st.line_chart(sensor_query, x='date_time', y='hourly_counts')
+
+st.subheader('''The page is divided in two categories:
+					1. PowerBI report
+					2. QGIS/Analytics done via python
+			''')
+options = st.selectbox('Please Select', ['PowerBI', "Preprocessing & Predictions'])
+
+if options == PowerBI:
+st.markdown("https://app.powerbi.com/links/rJKFdKXem5?ctid=df7f7579-3e9c-4a7e-b844-420280f53859&pbi_source=linkShare", unsafe_allow_html=True)
