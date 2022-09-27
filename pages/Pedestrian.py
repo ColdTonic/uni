@@ -41,4 +41,4 @@ options = st.selectbox('Please Select', ['PowerBI', 'Preprocessing & Predictions
 
 if options == PowerBI:
 #https://app.powerbi.com/links/rJKFdKXem5?ctid=df7f7579-3e9c-4a7e-b844-420280f53859&pbi_source=linkShare
-st.markdown("https://app.powerbi.com/groups/me/reports/a418c44f-ca82-4803-997b-1420c07c28c9/ReportSection?ctid=df7f7579-3e9c-4a7e-b844-420280f53859", unsafe_allow_html=True)
+	st.markdown("https://app.powerbi.com/groups/me/reports/a418c44f-ca82-4803-997b-1420c07c28c9/ReportSection?ctid=df7f7579-3e9c-4a7e-b844-420280f53859", unsafe_allow_html=True)
