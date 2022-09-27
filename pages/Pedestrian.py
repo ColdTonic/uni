@@ -8,9 +8,7 @@ import matplotlib.pyplot as plt
 #Client code/import environment variables into code
 
 client = Socrata("data.melbourne.vic.gov.au",
-                  st.secrets["TOKEN_ENV"],
-                  username=st.secrets["USER"],
-                  password=st.secrets["PASSWORD"])
+                  None)
 
 pedestrian_data = client.get("b2ak-trbp", limit=2000)
 pedestrian_df =pd.DataFrame.from_records(pedestrian_data)

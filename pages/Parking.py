@@ -25,3 +25,4 @@ parking_df['durationminutes'] = parking_df['durationminutes'].astype('int')
 present_vehicles = parking_df.where(parking_df.vehiclepresent ==True).groupby('deviceid').count()
 #send output to streamlit
 st.bar_chart(present_vehicles, y='durationminutes')
+
